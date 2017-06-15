@@ -5,7 +5,7 @@ Share the interesting article link with your friends.
 * Use the NY Times "Article Search" API. 
 - https://developer.nytimes.com/article_search_v2.json#/Documentation/GET/articlesearch.json
 
-**Home Screen:
+* Home Screen:
 - Allows the user to enter a search term and displays the results in either a list or grid view.
 - Use the ActionBar SearchView or custom layout as the query box instead of an EditText.
 - Results should display:

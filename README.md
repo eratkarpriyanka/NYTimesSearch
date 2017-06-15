@@ -25,6 +25,6 @@ Share the interesting article link with your friends.
 
 <img src='http://imgur.com/yIgR8RN.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-* []  GIF created with [LiceCap](http://www.cockos.com/licecap/).<br/>
-* [] Use of Retrofit to communicate with server. <br/>
-* [] Use of Glide library to download images. <br/>
+* [ ]  GIF created with [LiceCap](http://www.cockos.com/licecap/).<br/>
+* [ ] Use of Retrofit to communicate with server. <br/>
+* [ ] Use of Glide library to download images. <br/>

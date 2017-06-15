@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="recycler_top_margin">10dp</dimen>
+    <dimen name="thumbnail_width">100dp</dimen>
+    <dimen name="thumbnail_height">75dp</dimen>
+    <dimen name="thumbnail_padding">10dp</dimen>
+    <dimen name="articles_padding">10dp</dimen>
+    <dimen name="load_text_padding">2dp</dimen>
+    <dimen name="filter_padding">10dp</dimen>
+    <dimen name="filter_date_margin">25dp</dimen>
+    <dimen name="tv_filter_width">90dp</dimen>
+    <dimen name="et_filter_width">75dp</dimen>
+    <dimen name="sp_filter_width">105dp</dimen>
+    <dimen name="filter_item_margin">25dp</dimen>
+    <dimen name="btn_width">150dp</dimen>
+    <dimen name="filter_btn_margin">60dp</dimen>
+    <dimen name="filter_title_top_margin">5dp</dimen>
+</resources>

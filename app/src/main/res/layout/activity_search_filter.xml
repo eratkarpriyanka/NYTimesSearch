@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar">
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:padding="@dimen/filter_padding"
+            >
+
+            <TextView
+                android:id="@+id/tvFilterTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_title"
+                android:textStyle="italic|bold"
+                android:typeface="serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/filter_title_top_margin"
+                android:layout_marginRight="@dimen/filter_date_margin" />
+
+            <TextView
+                android:id="@+id/tvBeginDate"
+                android:layout_width="@dimen/tv_filter_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/begin_date"
+                android:layout_below="@id/tvFilterTitle"
+                android:layout_marginTop="@dimen/filter_item_margin"
+                android:layout_marginBottom="@dimen/filter_item_margin"
+                android:layout_marginRight="@dimen/filter_date_margin"
+                style="@style/filterTextStyle"/>
+
+            <EditText
+                android:id="@+id/etBeginDate"
+                android:layout_width="@dimen/et_filter_width"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvBeginDate"
+                android:layout_alignBaseline="@id/tvBeginDate"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:hint="@string/hintDate"
+                android:background="@drawable/drawable_edittext_border"
+                android:layout_marginTop="@dimen/filter_item_margin"
+                android:layout_marginBottom="@dimen/filter_item_margin"
+                style="@style/filterEditTextStyle"
+                />
+
+            <TextView
+                android:id="@+id/tvSortBy"
+                android:layout_width="@dimen/tv_filter_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBeginDate"
+                android:text="@string/filter_sort"
+                android:layout_marginRight="@dimen/filter_date_margin"
+                android:layout_marginTop="@dimen/filter_item_margin"
+                android:layout_marginBottom="@dimen/filter_item_margin"
+                style="@style/filterTextStyle"/>
+
+            <Spinner
+                android:id="@+id/spSortOrder"
+                android:layout_width="@dimen/sp_filter_width"
+                android:layout_height="wrap_content"
+                android:entries="@array/sort_order_array"
+                android:prompt="@string/sort_prompt"
+                android:layout_below="@id/etBeginDate"
+                android:layout_toRightOf="@id/tvSortBy"
+                android:layout_toEndOf="@id/tvSortBy"
+                android:layout_alignBaseline="@id/tvSortBy"
+                android:layout_marginTop="@dimen/filter_item_margin"
+                android:layout_marginBottom="@dimen/filter_item_margin"
+                />
+
+            <TextView
+                android:id="@+id/tvNewsDesk"
+                android:layout_width="@dimen/tv_filter_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSortBy"
+                android:text="@string/news_desk"
+                android:layout_marginRight="@dimen/filter_date_margin"
+                android:layout_marginTop="@dimen/filter_item_margin"
+                style="@style/filterTextStyle"/>
+
+
+            <LinearLayout
+                android:id="@+id/llNewsDesk"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tvNewsDesk"
+                android:layout_toRightOf="@id/tvNewsDesk"
+                android:layout_below="@id/spSortOrder"
+                android:layout_marginBottom="@dimen/filter_item_margin"
+                android:layout_alignBaseline="@id/tvNewsDesk">
+
+                <CheckBox android:id="@+id/cbArts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arts"
+                    style="@style/checkbox_style"
+                    app:buttonTint="@color/colorPrimaryDark" />
+
+                <CheckBox android:id="@+id/cbFashion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fashion"
+                    style="@style/checkbox_style"
+                    app:buttonTint="@color/colorPrimaryDark"/>
+
+                <CheckBox android:id="@+id/cbSports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sports"
+                    style="@style/checkbox_style"
+                    app:buttonTint="@color/colorPrimaryDark"/>
+
+                <CheckBox android:id="@+id/cbLifeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lifestyle"
+                    style="@style/checkbox_style"
+                    app:buttonTint="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:text="@string/create_filter"
+                android:layout_below="@id/llNewsDesk"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="@dimen/filter_btn_margin"
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
